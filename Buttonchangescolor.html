@@ -28,17 +28,25 @@ height: 4vh;
 
 <h1>Cool JS stuff</h1>
 
+
 <script>
 
-function colorChange(){
+var cc = false;
 
-document.getElementById("a1").style.backgroundColor = "blue";
+function colorChange(){
+if(cc == false){
+document.getElementById("a1").style.backgroundColor = "lightblue";
+cc = true;
+}else{
+document.getElementById("a1").style.backgroundColor = "orange";
+cc = false;
+}
 
 }
 
 </script>
 
-<button onclick = "colorChange()" class="firstButton">Blue</button>
+<button onclick = "colorChange()" class="firstButton">Change color</button>
 
 
 
